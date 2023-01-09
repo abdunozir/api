@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="topHeader_useInfo">
+        <img
+          src="./assets/images/zokirov.jpg"
+          alt="javohir zokirovning rasmi"
+        />
+        <p class="header_useName">Abdunozir Abduvaliev</p>
+        <ul class="header_medaContact">
+          <li>
+            <a href="#"><i class="bx bxl-telegram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a class="active" href="/home">Home</a></li>
+          <li><a href="/home">About</a></li>
+          <li><a href="/home">write me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="search">
+        <div class="search_wrapper">
+          <input type="text" placeholder="Search posts as a title..." />
+          <button>Search</button>
+        </div>
+      </section>
+
+      <section id="posts">
+        <ul class="post_ul">
+          <% posts.forEach((el) => { %>
+          <li class="post_li">
+            <a href="<%= '/post/' + el.title %>">
+              <div class="post_img">
+                <img src="./assets/images/zokirov.jpg" alt="" />
+              </div>
+              <div class="post_context">
+                <h2 class="post_title"><%= el.title %></h2>
+                <p class="post_context_info">
+                  by <span>Abdunozir Abduvaliev</span> -
+                  <span> JAN 12, 2020</span>
+                </p>
+
+                <button>Read post...</button>
+              </div></a
+            >
+          </li>
+          <% }) %>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_insta">
+        <a class="insta_link" href="">
+          <i class="bx bxl-instagram"></i> <span>Follow me!</span></a
+        >
+        <img
+          src="https://www.lufthansa.com/content/dam/lh/images/local_variations/c-1434774899-carbon-offsetting-header-visual.jpg.transform/lh-dcep-transform-width-1440/img.jpg"
+          alt=""
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/7/74/Diana_Mini_Photo_Sample.JPG"
+          alt=""
+        />
+        <img
+          src="https://www.lufthansa.com/content/dam/lh/images/local_variations/c-1434774899-carbon-offsetting-header-visual.jpg.transform/lh-dcep-transform-width-1440/img.jpg"
+          alt=""
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/7/74/Diana_Mini_Photo_Sample.JPG"
+          alt=""
+        />
+      </div>
+
+      <div class="footer_main">
+        <ul class="footer_main_medaContact">
+          <li>
+            <a href="#"><i class="bx bxl-telegram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      console.log("hello window");
+    </script>
+  </body>
+</html>
